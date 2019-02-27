@@ -1,0 +1,18 @@
+int i, j;
+void setup() {
+  for (i = 1; i <= 8; i++)
+    pinMode(i, OUTPUT);
+  pinMode(10, INPUT);
+}
+
+void loop() {
+  for (i = 1; i <= 8; i++)
+    digitalWrite(i, LOW);
+  delay(500);
+  for (i = 8,j=9; i >= 1;i--,j--) //¥k²¾
+  {
+    digitalWrite(j, LOW);
+    digitalWrite(i, HIGH);
+    delay(500);
+  }
+}

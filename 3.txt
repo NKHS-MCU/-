@@ -1,0 +1,67 @@
+if (digitalRead(10))
+  {
+    for (i = 1; i <= 8; i++)
+      digitalWrite(i, LOW);
+    delay(500);
+    for (i = 8, j = 9; i >= 1; i--, j--) //¥k²¾
+    {
+      digitalWrite(j, LOW);
+      digitalWrite(i, HIGH);
+      delay(500);
+    }
+    for (i = 1; i <= 8; i++)
+      digitalWrite(i, LOW);
+    delay(500);
+    for (i = 1, j = 0; i <= 8; i++, j++) //¥ª²¾
+    {
+      digitalWrite(j, LOW);
+      digitalWrite(i, HIGH);
+      delay(500);
+    }
+  }
+  else
+  {
+    for (x = 1; x <= 2; x++) //°{¨â¦¸
+    {
+      for (i = 1; i <= 8; i++)
+        digitalWrite(i, LOW);
+      delay(100);
+      for (i = 1; i <= 8; i++)
+        digitalWrite(i, HIGH);
+      delay(100);
+    }
+    for (x = 1; x <= 8; x++)
+    {
+      for (i = 1; i <= 8; i++)
+        digitalWrite(i, LOW);
+      delay(100);
+      for (i = 8, j = 9; i >= 1; i--, j--) //¥k²¾
+      {
+        digitalWrite(j, LOW);
+        digitalWrite(i, HIGH);
+        delay(100);
+      }
+    }
+    for (x = 1; x <= 2; x++) //°{¨â¦¸
+    {
+      for (i = 1; i <= 8; i++)
+        digitalWrite(i, LOW);
+      delay(100);
+      for (i = 1; i <= 8; i++)
+        digitalWrite(i, HIGH);
+      delay(100);
+    }
+    for (x = 1; x <= 8; x++)
+    {
+      for (i = 1; i <= 8; i++)
+        digitalWrite(i, LOW);
+      delay(100);
+      for (i = 1, j = 0; i <= 8; i++, j++) //¥ª²¾
+      {
+        digitalWrite(j, LOW);
+        digitalWrite(i, HIGH);
+        delay(100);
+      }
+    }
+  }
+}

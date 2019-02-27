@@ -1,0 +1,43 @@
+  void loop() {
+  for(x=1;x<=2;x++) //閃兩次
+  {
+    for (i = 1; i <= 8; i++)
+      digitalWrite(i, LOW);
+    delay(200);
+    for (i = 1; i <= 8; i++)
+     digitalWrite(i, HIGH);
+    delay(200);
+  }
+  for(x=1;x<=8;x++)
+  {
+    for (i = 1; i <= 8; i++)
+      digitalWrite(i, LOW);
+    delay(200);
+    for (i = 8,j=9; i >= 1;i--,j--) //右移
+    {
+      digitalWrite(j, LOW);
+      digitalWrite(i, HIGH);
+      delay(200);
+    }
+  }
+  for(x=1;x<=2;x++) //閃兩次
+  {
+    for (i = 1; i <= 8; i++)
+      digitalWrite(i, LOW);
+    delay(200);
+    for (i = 1; i <= 8; i++)
+     digitalWrite(i, HIGH);
+    delay(200);
+  }
+  for(x=1;x<=8;x++){
+    for (i = 1; i <= 8; i++)
+      digitalWrite(i, LOW);
+    delay(200);
+    for (i = 1,j=0; i <=8;i++,j++) //左移
+    {
+      digitalWrite(j, LOW);
+      digitalWrite(i, HIGH);
+      delay(200);
+    }
+  }
+}
